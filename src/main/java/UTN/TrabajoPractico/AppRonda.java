@@ -2,18 +2,18 @@ package UTN.TrabajoPractico;
 
 import javax.swing.JOptionPane;
 
-import Coneccion.ConeccionMSQL;
-import Coneccion.ExcepcionConnection;
+import Conexion.ConexionMSQL;
+import Conexion.ExcepcionConnection;
 import Entidades.Ronda;
 import Implementaciones.RondaImplementacion;
 
 public class AppRonda {
 	public static void main(String[] args) throws InterruptedException {
-		ConeccionMSQL coneccionMSQL = ConeccionMSQL.getConeccionMSQL();
+		ConexionMSQL conexionMSQL = ConexionMSQL.getConeccionMSQL();
 
 		RondaImplementacion rondaImplementacion = null;
 		try {
-			rondaImplementacion = new RondaImplementacion(coneccionMSQL.getConexion());
+			rondaImplementacion = new RondaImplementacion(conexionMSQL.getConexion());
 		} catch (ExcepcionConnection e) {
 			e.printStackTrace();
 		}

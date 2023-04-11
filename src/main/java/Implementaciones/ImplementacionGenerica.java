@@ -3,8 +3,8 @@ package Implementaciones;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import Coneccion.DAO;
-import Coneccion.ExcepcionConnection;
+import Conexion.DAO;
+import Conexion.ExcepcionConnection;
 
 public abstract class ImplementacionGenerica<E, K> implements DAO<E, K> {
 	protected PreparedStatement preparedStatementBuscarPorClavePrimaria;

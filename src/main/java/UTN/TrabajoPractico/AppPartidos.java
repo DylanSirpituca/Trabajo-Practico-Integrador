@@ -2,18 +2,18 @@ package UTN.TrabajoPractico;
 
 import javax.swing.JOptionPane;
 
-import Coneccion.ConeccionMSQL;
-import Coneccion.ExcepcionConnection;
+import Conexion.ConexionMSQL;
+import Conexion.ExcepcionConnection;
 import Entidades.Partidos;
 import Implementaciones.PartidoImplementacion;
 
 public class AppPartidos {
 	public static void main(String[] args) throws InterruptedException {
-		ConeccionMSQL coneccionMSQL = ConeccionMSQL.getConeccionMSQL();
+		ConexionMSQL conexionMSQL = ConexionMSQL.getConeccionMSQL();
 
 		PartidoImplementacion partidoImplementacion = null;
 		try {
-			partidoImplementacion = new PartidoImplementacion(coneccionMSQL.getConexion());
+			partidoImplementacion = new PartidoImplementacion(conexionMSQL.getConexion());
 		} catch (ExcepcionConnection e) {
 			e.printStackTrace();
 		}

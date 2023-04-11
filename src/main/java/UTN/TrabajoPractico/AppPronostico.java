@@ -2,18 +2,18 @@ package UTN.TrabajoPractico;
 
 import javax.swing.JOptionPane;
 
-import Coneccion.ConeccionMSQL;
-import Coneccion.ExcepcionConnection;
+import Conexion.ConexionMSQL;
+import Conexion.ExcepcionConnection;
 import Entidades.Pronostico;
 import Implementaciones.PronosticoImplementacion;
 
 public class AppPronostico {
 	public static void main(String[] args) throws InterruptedException {
-		ConeccionMSQL coneccionMSQL = ConeccionMSQL.getConeccionMSQL();
+		ConexionMSQL conexionMSQL = ConexionMSQL.getConeccionMSQL();
 
 		PronosticoImplementacion pronosticoImplementacion = null;
 		try {
-			pronosticoImplementacion = new PronosticoImplementacion(coneccionMSQL.getConexion());
+			pronosticoImplementacion = new PronosticoImplementacion(conexionMSQL.getConexion());
 		} catch (ExcepcionConnection e) {
 			e.printStackTrace();
 		}

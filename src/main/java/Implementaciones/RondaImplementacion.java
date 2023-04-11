@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-import Coneccion.ExcepcionConnection;
+import Conexion.ExcepcionConnection;
 import Entidades.Ronda;
 
 public class RondaImplementacion extends ImplementacionGenerica<Ronda, String> {
